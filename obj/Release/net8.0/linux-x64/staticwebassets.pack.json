@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "/home/florian/Projects/Ecole/bookScan-website/wwwroot/css/download.css",
+      "PackagePath": "staticwebassets/css/download.css"
+    },
+    {
+      "Id": "/home/florian/Projects/Ecole/bookScan-website/wwwroot/css/index.css",
+      "PackagePath": "staticwebassets/css/index.css"
+    },
+    {
+      "Id": "/home/florian/Projects/Ecole/bookScan-website/wwwroot/css/notImplement.css",
+      "PackagePath": "staticwebassets/css/notImplement.css"
+    },
+    {
+      "Id": "/home/florian/Projects/Ecole/bookScan-website/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/home/florian/Projects/Ecole/bookScan-website/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/home/florian/Projects/Ecole/bookScan-website/wwwroot/font/Candy Beans.otf",
+      "PackagePath": "staticwebassets/font/Candy Beans.otf"
+    },
+    {
+      "Id": "/home/florian/Projects/Ecole/bookScan-website/wwwroot/font/Cocogoose-Pro-Regular-trial.ttf",
+      "PackagePath": "staticwebassets/font/Cocogoose-Pro-Regular-trial.ttf"
+    },
+    {
+      "Id": "/home/florian/Projects/Ecole/bookScan-website/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/home/florian/Projects/Ecole/bookScan-website/wwwroot/svg/android.svg",
+      "PackagePath": "staticwebassets/svg/android.svg"
+    },
+    {
+      "Id": "obj/Release/net8.0/linux-x64/staticwebassets/msbuild.bookScan-website.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/linux-x64/staticwebassets/msbuild.build.bookScan-website.props",
+      "PackagePath": "build\\bookScan-website.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/linux-x64/staticwebassets/msbuild.buildMultiTargeting.bookScan-website.props",
+      "PackagePath": "buildMultiTargeting\\bookScan-website.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/linux-x64/staticwebassets/msbuild.buildTransitive.bookScan-website.props",
+      "PackagePath": "buildTransitive\\bookScan-website.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

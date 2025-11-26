@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/bookScan-website.props" />
+</Project>

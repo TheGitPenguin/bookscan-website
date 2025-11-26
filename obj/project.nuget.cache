@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "yogKXoHxZCh1CiT06714A/tqxGQLdXSJJSV9JpaxtmcaMi+VFMpvkvCOtGqe/hXn1EKNzJfdS7+PnTYJcQ2KTw==",
+  "success": true,
+  "projectFilePath": "/home/florian/Projects/Ecole/bookScan-website/bookScan-website.csproj",
+  "expectedPackageFiles": [
+    "/home/florian/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.20/microsoft.netcore.app.runtime.linux-x64.8.0.20.nupkg.sha512",
+    "/home/florian/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.20/microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512",
+    "/home/florian/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.20/microsoft.aspnetcore.app.runtime.linux-x64.8.0.20.nupkg.sha512",
+    "/home/florian/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.20/microsoft.netcore.app.host.linux-x64.8.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}

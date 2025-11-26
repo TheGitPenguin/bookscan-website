@@ -1,0 +1,53 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.titleSubTitle {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    gap: 10px;
+
+    h1 {
+        text-align: center;
+
+        font-size: 72.5px;
+
+        padding: 0;
+        margin: 0;
+
+        padding-top: 40px;
+    }
+
+    p {
+        color: #c1cecf;
+        text-wrap: inherit;
+        
+        text-align: center;
+
+        width: 700px;
+    }
+}
+
+.android-img {
+    height: 45px;
+    width: 45px;
+
+    filter: brightness(0) invert(1);
+}
+
+.support-container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}

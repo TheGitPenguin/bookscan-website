@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - bookScan</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="@ViewData["StyleFile"]" asp-append-version='true' />
+</head>
+<body>
+    <header>
+        <div class="left-part">
+            <h1>BookScan</h1>
+        </div>
+        <div class="center-part">
+            <a href="/home/" class="@(ViewData["Title"] == "Home Page" ? "selected" : "")">HOME</a>
+            <div class="vertical-line"></div>
+            <a href="/home/download" class="@(ViewData["Title"] == "Download" ? "selected" : "")">DOWNLOAD</a>
+            <div class="vertical-line"></div>
+            <a href="/home/changelog" class="@(ViewData["Title"] == "Changelog" ? "selected" : "")">CHANGELOG</a>
+        </div>
+        <div class="right-part">
+        </div>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>
