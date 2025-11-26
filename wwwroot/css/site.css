@@ -34,6 +34,8 @@ header {
     padding-left: 20px;
     padding-right: 20px;
 
+
+
     .left-part {
         display: flex;
         flex-direction: row;
@@ -86,8 +88,31 @@ header {
                 color: #ffa4a4;
             }
         }
+    }
 
-        
+    @media (max-width: 780px) {
+        flex-direction: column;
+
+        height: 120px;
+
+        .left-part {
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+
+            h1 {
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .right-part {
+            width: 100%;
+        }
     }
 }
 

@@ -10,9 +10,9 @@
 
     align-items: center;
 
-    width: 100%;
-
     gap: 10px;
+
+    width: auto;
 
     h1 {
         text-align: center;
@@ -27,11 +27,12 @@
 
     p {
         color: #c1cecf;
-        text-wrap: inherit;
         
         text-align: center;
 
-        width: 700px;
+        width: 100%;
+
+        max-width: 700px;
     }
 }
 
