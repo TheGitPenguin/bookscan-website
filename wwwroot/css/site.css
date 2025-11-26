@@ -124,6 +124,9 @@ main {
     justify-content: center;
 
     height: calc(100% - 71px);
+    @media (max-width: 780px) {
+        height: calc(100% - 141px);
+    }
 }
 
 .vertical-line {
