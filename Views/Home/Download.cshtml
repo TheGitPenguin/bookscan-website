@@ -4,13 +4,13 @@
 }
 
 <div class="page-container">
-    <a href="javascript:void(0)" class="apk-download isDisable">Download APK</a>
+    <a href=@ViewData["urlDownload"] class="apk-download">Download APK</a>
     <div class="version-indicator-container">
         <p>
             Version : 
         </p>
         <p>
-            0 - 0 - 0 - 0
+            @ViewData["stringVersion"]
         </p>
     </div>
 </div>

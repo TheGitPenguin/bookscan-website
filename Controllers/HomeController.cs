@@ -1,16 +1,19 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using bookScan_website.Models;
+using bookScan_website.Services;
 
 namespace bookScan_website.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private VersionItemServices _versionItemServices;
 
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
+        _versionItemServices = new VersionItemServices();
     }
 
     public IActionResult Index()
@@ -20,6 +23,20 @@ public class HomeController : Controller
 
     public IActionResult Download()
     {
+        VersionItem lastItem = _versionItemServices.GetLastVersionItem();
+        ViewData["versionItem"] = lastItem;
+
+        string serverVersion = lastItem.ServerVersion + "";
+        string clientMajorVersion = lastItem.ClientMajorVersion + "";
+        string clientMinorVersion = lastItem.ClientMinorVersion + "";
+        string IdPublicationSteps = lastItem.IdPublicationSteps + "";
+
+        string stringVersion = serverVersion + "." + clientMajorVersion + "." + clientMinorVersion + "." + IdPublicationSteps;
+
+        ViewData["stringVersion"] = stringVersion;
+
+        ViewData["urlDownload"] = "https://downloads.thepenguinontheweb.tech/bookscan/bookscan-"+ stringVersion + ".apk";
+
         return View();
     }
 
