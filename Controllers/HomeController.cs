@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using bookScan_website.Models;
@@ -42,7 +43,9 @@ public class HomeController : Controller
 
     public IActionResult Changelog()
     {
-        return View();
+        IEnumerable<VersionItem> versionItems = _versionItemServices.GetAllVersionItems();
+
+        return View(versionItems);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

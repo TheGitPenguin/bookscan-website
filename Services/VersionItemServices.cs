@@ -14,12 +14,34 @@ namespace bookScan_website.Services
             return item.ServerVersion * 1000 + item.ClientMajorVersion * 100 + item.ClientMinorVersion * 10 + item.IdPublicationSteps;
         }
         private JsonRead? _JsonRead;
-        public VersionItem GetLastVersionItem()
+
+        private void EnsureJsonReader()
         {
             if (_JsonRead == null)
             {
                 _JsonRead = new JsonRead();
             }
+        }
+
+        public IEnumerable<VersionItem> GetAllVersionItems()
+        {
+            EnsureJsonReader();
+
+            VersionsFile? versionsFile = _JsonRead.GetVerionsFile();
+
+            if (versionsFile == null || versionsFile.versions == null || versionsFile.versions.Length == 0)
+            {
+                return Enumerable.Empty<VersionItem>();
+            }
+
+            return versionsFile.versions
+                .OrderByDescending(GetValueVersionItem)
+                .ToArray();
+        }
+
+        public VersionItem GetLastVersionItem()
+        {
+            EnsureJsonReader();
 
             VersionsFile? versionsFile = _JsonRead.GetVerionsFile();
 

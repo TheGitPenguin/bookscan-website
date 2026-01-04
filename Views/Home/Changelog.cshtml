@@ -1,3 +1,5 @@
+@using System.Linq
+@model IEnumerable<bookScan_website.Models.VersionItem>
 @{
     ViewData["Title"] = "Changelog";
     ViewData["StyleFile"] = "~/css/changelog.css";
@@ -5,14 +7,45 @@
 
 <div class="page-container">
     <div class="titleSubTitle">
-        <h1>
-            Changelog page : 
-        </h1>
+        <h1>Changelog</h1>
         <div class="horizontal-line"></div>
-
+        <p>Historique des versions et changements.</p>
     </div>
 
-    <lu>
-        0.0.0 Wait : The long time to wait the project
-    </lu>
+    @if (Model == null || !Model.Any())
+    {
+        <div class="empty-state">Aucun changelog disponible pour le moment.</div>
+    }
+    else
+    {
+        <p class="list-hint">Versions récentes et précédentes, listées de la plus récente à la plus ancienne.</p>
+        <div class="changelog-list" aria-label="Toutes les versions (plus récent en haut)">
+            @foreach (var item in Model)
+            {
+                var versionNumber = $"{item.ServerVersion}.{item.ClientMajorVersion}.{item.ClientMinorVersion}.{item.IdPublicationSteps}";
+                <article class="version-card">
+                    <header class="version-header">
+                        <div class="version-title">
+                            <span class="version-label">Version</span>
+                            <span class="version-number">@versionNumber</span>
+                        </div>
+                        @if (!string.IsNullOrWhiteSpace(item.ChangelogFr))
+                        {
+                            <p class="version-summary">@item.ChangelogFr</p>
+                        }
+                    </header>
+
+                    @if (item.ChangelogPointFr != null && item.ChangelogPointFr.Any(p => !string.IsNullOrWhiteSpace(p)))
+                    {
+                        <ul class="changelog-points">
+                            @foreach (var point in item.ChangelogPointFr.Where(p => !string.IsNullOrWhiteSpace(p)))
+                            {
+                                <li>@point</li>
+                            }
+                        </ul>
+                    }
+                </article>
+            }
+        </div>
+    }
 </div>

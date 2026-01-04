@@ -123,9 +123,13 @@ main {
     align-items: center;
     justify-content: center;
 
-    height: calc(100% - 71px);
+    min-height: calc(100vh - 70px);
+    padding: 32px 16px 40px;
+    box-sizing: border-box;
     @media (max-width: 780px) {
-        height: calc(100% - 141px);
+        min-height: calc(100vh - 141px);
+        padding-top: 28px;
+        padding-bottom: 32px;
     }
 }
 
